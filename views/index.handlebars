@@ -1,0 +1,50 @@
+<div class="container">
+
+  <h1 class="text-center">你想對誰說幹話？</h1>
+
+  <form method="POST">
+    <div class="row mt-5">
+
+      <div class="col-4 card border-0 pt-2" style="width: 18rem;">
+        <label class="text-center" for="Engineer">
+          <img class="card-img-top"
+            src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" alt="Engineer">
+          <input type="radio" id="Engineer" name="group" value="engineer" {{#ifEquals option "engineer"}} checked
+            {{/ifEquals}}>
+          工程師
+        </label>
+      </div>
+
+      <div class="col-4  card border-0 pt-2" style="width: 18rem;">
+        <label class="text-center" for="designer">
+          <img class="card-img-top"
+            src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" alt="Engineer">
+          <input type="radio" id="designer" name="group" value='designer' {{#ifEquals option "designer"}} checked
+            {{/ifEquals}}>
+          設計師
+        </label>
+      </div>
+
+      <div class="col-4  card border-0 pt-2" style="width: 18rem;">
+        <label class="text-center" for="founder">
+          <img class="card-img-top"
+            src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" alt="Engineer">
+          <input type="radio" id="founder" name="group" value='founder' {{#ifEquals option "founder"}} checked
+            {{/ifEquals}}>
+          創業家
+        </label>
+      </div>
+
+    </div>
+
+    <div class="row pl-3">
+      <button class="col-1 btn border-dark rounded-0" type="submit">產生幹話</button>
+      <div class="col-10 ml-4 alert alert-light border-dark rounded-0" role="alert">
+        {{#if output}}
+        {{output}}
+        {{/if}}
+      </div>
+    </div>
+
+  </form>
+</div>

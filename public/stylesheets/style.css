@@ -1,0 +1,16 @@
+.container {
+  width: 100vw;
+}
+
+img {
+  height: 235px;
+}
+.btn {
+  height: 40px;
+  min-width: 85px;
+}
+.alert {
+  height: 80px;
+  font-size: 20px;
+  color: black;
+}
