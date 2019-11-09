@@ -22,9 +22,12 @@ app.get("/", (req, res) => {
 
 app.post("/", (req, res) => {
   let option = req.body.group;
+  console.log(req.body);
+
   //radio表單取得資料：req.body.group 即可選到value值
   //radio由於只能選1個，name設定相同，因此差異需設定在value
   let output = generateword(option);
+
   res.render("index", { output, option });
 });
 
